@@ -1,0 +1,16 @@
+# Certificates and keys - never commit
+certs/
+*.pfx
+*.p12
+*.cer
+*.pem
+*.key
+
+# Report output
+*.csv
+output/
+
+# Local env / editor
+.env
+*.local.ps1
+.vscode/
