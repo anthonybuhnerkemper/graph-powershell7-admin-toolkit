@@ -56,6 +56,7 @@ Disconnect-M365Admin
 ## Repo map
 
 ```text
+.github/workflows/pssa.yml  PSScriptAnalyzer CI on push and PR
 docs/
   01-install-powershell7-and-modules.md
   02-app-registration-certificate-auth.md
