@@ -1,5 +1,7 @@
 # Microsoft Graph PowerShell 7 Admin Toolkit
 
+[![PowerShell Gallery](https://img.shields.io/powershellgallery/v/ABK.GraphAdminToolkit?label=PowerShell%20Gallery)](https://www.powershellgallery.com/packages/ABK.GraphAdminToolkit) [![Downloads](https://img.shields.io/powershellgallery/dt/ABK.GraphAdminToolkit)](https://www.powershellgallery.com/packages/ABK.GraphAdminToolkit)
+
 A practical toolkit and step-by-step guide for connecting to **Microsoft Graph with PowerShell 7** and managing **Microsoft Purview**, **Exchange Online**, and **Entra ID security** settings, using current Microsoft modules:
 
 - **Microsoft.Graph** PowerShell SDK v2
@@ -8,6 +10,17 @@ A practical toolkit and step-by-step guide for connecting to **Microsoft Graph w
 Every script is commented, has comment-based help (`Get-Help ./script.ps1 -Full`), exports reports to CSV, and every change script supports `-WhatIf` / `-Confirm`. Authentication uses **certificates** (app-only) or **interactive** delegated sign-in. Tenant, app, and certificate values come from parameters or environment variables. No secrets are stored in the repo.
 
 > ⚠️ **Disclaimer:** Test everything in a non-production / developer tenant first. Examples use `contoso.com`, `contoso.onmicrosoft.com`, and placeholder GUIDs (`00000000-0000-0000-0000-000000000000`). Review each script before running it in your environment.
+
+
+## Install from PowerShell Gallery
+
+```powershell
+Install-Module ABK.GraphAdminToolkit -Scope CurrentUser
+Import-Module ABK.GraphAdminToolkit
+Get-Command -Module ABK.GraphAdminToolkit
+```
+
+Each script is also exported as a function with the same name and parameters (e.g. `Get-Help <FunctionName> -Full`). Prerequisite modules (Microsoft Graph, ExchangeOnlineManagement, ConfigMgr console, Citrix SDK, etc.) are not auto-installed; install the ones the functions you use need, as described below. The module source lives in [`ABK.GraphAdminToolkit/`](ABK.GraphAdminToolkit/).
 
 ## Prerequisites
 
